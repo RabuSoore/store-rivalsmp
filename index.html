@@ -1104,7 +1104,7 @@
                     showFeatures(rank.name);
                 };
 
-                // Create buy button with SIMPLE WhatsApp message
+                // Create buy button with FIXED WhatsApp link
                 const buyBtn = document.createElement('a');
                 buyBtn.className = 'btn-buy';
                 buyBtn.innerHTML = '<i class="fas fa-shopping-cart"></i> Beli Sekarang';
@@ -1112,15 +1112,24 @@
                 buyBtn.onclick = function(e) {
                     e.preventDefault();
                     e.stopPropagation();
-                    // FORMAT CHAT SEDERHANA: "Saya ingin membeli rank Ahsen"
-                    const message = `Saya ingin membeli rank ${rank.name}`;
-                    const waLink = `https://wa.me/6285774033454?text=${encodeURIComponent(message)}`;
+                    
+                    // FORMAT LINK WA YANG BENAR - LANGSUNG DIBUKA
+                    const message = "Saya ingin membeli rank " + rank.name;
+                    const waLink = "https://wa.me/6285774033454?text=" + encodeURIComponent(message);
+                    
+                    // BUKA LINK DI TAB BARU
                     window.open(waLink, '_blank');
+                    
+                    return false;
                 };
 
                 // Build card
-                card.innerHTML = `
-                    ${index === 0 ? '<div class="rank-badge">POPULER</div>' : ''}
+                let badgeHtml = '';
+                if (index === 0) {
+                    badgeHtml = '<div class="rank-badge">POPULER</div>';
+                }
+                
+                card.innerHTML = badgeHtml + `
                     <div class="rank-name">${rank.name}</div>
                     <div class="rank-price">Rp ${rank.price}K <small>/permanent</small></div>
                 `;
@@ -1142,7 +1151,7 @@
                 const card = document.createElement('div');
                 card.className = 'coin-card';
                 
-                // Create buy button with SIMPLE WhatsApp message
+                // Create buy button with FIXED WhatsApp link
                 const buyBtn = document.createElement('a');
                 buyBtn.className = 'btn-buy';
                 buyBtn.innerHTML = '<i class="fas fa-shopping-cart"></i> Beli Sekarang';
@@ -1150,10 +1159,15 @@
                 buyBtn.onclick = function(e) {
                     e.preventDefault();
                     e.stopPropagation();
-                    // FORMAT CHAT SEDERHANA: "Saya ingin membeli coin 1.000 Coin"
-                    const message = `Saya ingin membeli coin ${coin.amount}`;
-                    const waLink = `https://wa.me/628892910155?text=${encodeURIComponent(message)}`;
+                    
+                    // FORMAT LINK WA YANG BENAR - LANGSUNG DIBUKA
+                    const message = "Saya ingin membeli coin " + coin.amount;
+                    const waLink = "https://wa.me/6288892910155?text=" + encodeURIComponent(message);
+                    
+                    // BUKA LINK DI TAB BARU
                     window.open(waLink, '_blank');
+                    
+                    return false;
                 };
 
                 card.innerHTML = `
