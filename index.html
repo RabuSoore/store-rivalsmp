@@ -507,7 +507,7 @@
             font-weight: 400;
         }
 
-        /* Note untuk rank - INI YANG BARU */
+        /* Note untuk rank */
         .rank-note {
             background: rgba(255, 215, 0, 0.08);
             border-left: 4px solid #ffd700;
@@ -1067,7 +1067,7 @@
             }
         ];
 
-        // Data Coins (1k coin = 10k)
+        // Data Coins
         const coins = [
             { amount: '1.000 Coin', price: 10 },
             { amount: '5.000 Coin', price: 45 },
@@ -1104,7 +1104,7 @@
                     showFeatures(rank.name);
                 };
 
-                // Create buy button with CORRECT WhatsApp link
+                // Create buy button with SIMPLE WhatsApp message
                 const buyBtn = document.createElement('a');
                 buyBtn.className = 'btn-buy';
                 buyBtn.innerHTML = '<i class="fas fa-shopping-cart"></i> Beli Sekarang';
@@ -1112,8 +1112,8 @@
                 buyBtn.onclick = function(e) {
                     e.preventDefault();
                     e.stopPropagation();
-                    // FORMAT WA YANG BENAR: 6285774033454 (sudah dengan kode negara)
-                    const message = `Halo saya ingin membeli rank ${rank.name} seharga Rp ${rank.price}K`;
+                    // FORMAT CHAT SEDERHANA: "Saya ingin membeli rank Ahsen"
+                    const message = `Saya ingin membeli rank ${rank.name}`;
                     const waLink = `https://wa.me/6285774033454?text=${encodeURIComponent(message)}`;
                     window.open(waLink, '_blank');
                 };
@@ -1142,7 +1142,7 @@
                 const card = document.createElement('div');
                 card.className = 'coin-card';
                 
-                // Create buy button with CORRECT WhatsApp link
+                // Create buy button with SIMPLE WhatsApp message
                 const buyBtn = document.createElement('a');
                 buyBtn.className = 'btn-buy';
                 buyBtn.innerHTML = '<i class="fas fa-shopping-cart"></i> Beli Sekarang';
@@ -1150,8 +1150,8 @@
                 buyBtn.onclick = function(e) {
                     e.preventDefault();
                     e.stopPropagation();
-                    // FORMAT WA YANG BENAR: 6288892910155 (sudah dengan kode negara)
-                    const message = `Halo saya ingin membeli ${coin.amount} seharga Rp ${coin.price}K`;
+                    // FORMAT CHAT SEDERHANA: "Saya ingin membeli coin 1.000 Coin"
+                    const message = `Saya ingin membeli coin ${coin.amount}`;
                     const waLink = `https://wa.me/6288892910155?text=${encodeURIComponent(message)}`;
                     window.open(waLink, '_blank');
                 };
