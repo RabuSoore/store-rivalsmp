@@ -21,6 +21,8 @@
             color: #fff;
             overflow-x: hidden;
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         /* Simple Gradient Background */
@@ -251,6 +253,7 @@
             margin-top: 80px;
             padding: 2rem 5%;
             position: relative;
+            flex: 1;
         }
 
         .section {
@@ -364,84 +367,242 @@
             border-color: #fff;
         }
 
-        /* Home Content */
-        .home-content {
+        /* Server Description */
+        .server-description {
             max-width: 900px;
-            margin: 0 auto;
+            margin: 0 auto 3rem auto;
             text-align: center;
-            padding: 1rem 0;
         }
 
-        .home-title {
-            font-size: 3.5rem;
+        .server-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid #ffd700;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            margin-bottom: 2rem;
+        }
+
+        .server-badge i {
+            color: #ffd700;
+            font-size: 1.2rem;
+        }
+
+        .server-badge span {
+            color: #ffd700;
+            font-weight: 600;
+        }
+
+        .server-title {
+            font-size: 3rem;
             font-weight: 800;
-            line-height: 1.2;
             margin-bottom: 1.5rem;
-        }
-
-        .home-title span {
-            color: #ffd700;
-            display: block;
-            font-size: 4rem;
-            text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
-        }
-
-        .home-description {
-            color: #ccc;
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 2.5rem;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-top: 2.5rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .stat-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 20px;
-            padding: 1.8rem 1rem;
-            text-align: center;
-            transition: all 0.3s;
-            backdrop-filter: blur(5px);
-        }
-
-        .stat-card:hover {
-            transform: translateY(-8px);
-            border-color: #ffd700;
-            background: rgba(255, 215, 0, 0.05);
-            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.1);
-        }
-
-        .stat-card i {
-            font-size: 2.5rem;
-            color: #ffd700;
-            margin-bottom: 1rem;
-        }
-
-        .stat-number {
-            font-size: 2.2rem;
-            font-weight: 800;
-            margin-bottom: 0.3rem;
             background: linear-gradient(135deg, #fff, #ffd700);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .stat-label {
+        .server-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .tag {
+            background: rgba(255, 215, 0, 0.08);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            color: #ffd700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tag i {
+            color: #ffd700;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 215, 0, 0.15);
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            border-color: #ffd700;
+            background: rgba(255, 215, 0, 0.05);
+        }
+
+        .feature-item i {
+            font-size: 2rem;
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        .feature-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .feature-item p {
             color: #aaa;
             font-size: 0.9rem;
-            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        /* Tutorial Grid */
+        .tutorial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .tutorial-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 25px;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .tutorial-card:hover {
+            transform: translateY(-5px);
+            border-color: #ffd700;
+            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.1);
+        }
+
+        .tutorial-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .tutorial-header i {
+            font-size: 2rem;
+            color: #ffd700;
+            background: rgba(255, 215, 0, 0.1);
+            padding: 1rem;
+            border-radius: 15px;
+        }
+
+        .tutorial-header h3 {
+            font-size: 1.5rem;
+            color: #ffd700;
+        }
+
+        .tutorial-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .step {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, #ffd700, #ffb347);
+            color: #03050a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content p {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+
+        .command-block {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 8px;
+            padding: 0.8rem 1rem;
+            font-family: monospace;
+            color: #ffd700;
+            font-size: 0.95rem;
+            display: inline-block;
+        }
+
+        .command-block i {
+            margin-right: 8px;
+            color: #ffd700;
+            font-size: 0.9rem;
+        }
+
+        .note-box {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 215, 0, 0.08);
+            border-left: 4px solid #ffd700;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .note-box i {
+            color: #ffd700;
+            font-size: 1.2rem;
+        }
+
+        .note-box p {
+            color: #fff;
+            font-style: italic;
+        }
+
+        .platform-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 215, 0, 0.1);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            margin-top: 0.5rem;
+        }
+
+        .platform-badge i {
+            color: #ffd700;
+        }
+
+        .platform-badge span {
+            color: #ffd700;
+            font-size: 0.9rem;
         }
 
         /* Rank & Coin Grids */
@@ -507,7 +668,6 @@
             font-weight: 400;
         }
 
-        /* Note untuk rank */
         .rank-note {
             background: rgba(255, 215, 0, 0.08);
             border-left: 4px solid #ffd700;
@@ -749,12 +909,30 @@
             opacity: 1;
         }
 
+        /* SIMPLE FOOTER - HANYA COPYRIGHT */
+        .simple-footer {
+            text-align: center;
+            padding: 1.5rem 5%;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 215, 0, 0.2);
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .simple-footer span {
+            color: #ffd700;
+        }
+
+        .simple-footer i {
+            color: #ffd700;
+            font-size: 0.8rem;
+        }
+
         /* Responsive */
         @media (max-width: 1024px) {
             .section-header h1 { font-size: 3rem; }
             .section-header .glow-text { font-size: 6rem; }
-            .home-title { font-size: 3rem; }
-            .home-title span { font-size: 3.5rem; }
+            .feature-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 768px) {
@@ -764,25 +942,24 @@
             .ip-info { flex-direction: column; gap: 0.8rem; }
             .ip-details p { font-size: 1.5rem; }
             
-            .stats-grid { grid-template-columns: 1fr; gap: 1rem; }
-            .stat-card { padding: 1.5rem; }
+            .feature-grid { grid-template-columns: 1fr; }
             
             .faq-links { flex-direction: column; }
             .faq-link { width: 100%; }
             
             .section-header h1 { font-size: 2.5rem; }
             .section-header .glow-text { font-size: 4rem; }
-            .home-title { font-size: 2.2rem; }
-            .home-title span { font-size: 2.8rem; }
-            .home-description { font-size: 1rem; }
             
             .rank-grid, .coin-grid { grid-template-columns: 1fr; }
             .rank-price, .coin-price { font-size: 2.2rem; }
+
+            .tutorial-grid { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 480px) {
             .server-name { display: none; }
             .copy-btn { padding: 0.8rem 1.5rem; font-size: 0.95rem; }
+            .server-tags { flex-direction: column; align-items: center; }
         }
     </style>
 </head>
@@ -825,6 +1002,10 @@
                 <i class="fas fa-coins"></i>
                 Coin
             </a>
+            <a href="#tutorial" class="nav-link" data-section="tutorial">
+                <i class="fas fa-book"></i>
+                Tutorial
+            </a>
         </div>
     </div>
 
@@ -855,31 +1036,42 @@
                 </button>
             </div>
 
-            <div class="home-content">
-                <h2 class="home-title">
-                    Welcome to <span>RivalSMP</span>
-                </h2>
-                <p class="home-description">
-                    Server Minecraft Survival Multiplayer terbaik dengan fitur lengkap! 
-                    Nikmati pengalaman bermain yang seru dengan komunitas yang aktif dan ramah. 
-                    Dapatkan rank eksklusif dan kumpulkan coin untuk membuka berbagai fitur menarik!
-                </p>
+            <!-- Server Description -->
+            <div class="server-description">
+                <div class="server-badge">
+                    <i class="fas fa-crown"></i>
+                    <span>#1 Survival Mix Server</span>
+                </div>
+
+                <h2 class="server-title">RivalSMP</h2>
                 
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <i class="fas fa-users"></i>
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Player Online</div>
+                <div class="server-tags">
+                    <div class="tag"><i class="fas fa-crosshairs"></i> KOTH</div>
+                    <div class="tag"><i class="fas fa-magic"></i> Slimefun</div>
+                    <div class="tag"><i class="fas fa-shield-alt"></i> Custom Weapons</div>
+                    <div class="tag"><i class="fas fa-users"></i> Survival Mix</div>
+                </div>
+
+                <p style="color: #ccc; line-height: 1.8; max-width: 700px; margin: 0 auto 2rem auto;">
+                    Server Minecraft Survival Mix terbaik dengan perpaduan gameplay klasik dan fitur modern! 
+                    Nikmati pengalaman bermain yang seru dengan senjata custom, sistem Slimefun, dan event KOTH yang menantang.
+                </p>
+
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-gun"></i>
+                        <h4>Custom Weapons</h4>
+                        <p>Koleksi senjata unik dengan kemampuan spesial untuk PvP yang lebih seru</p>
                     </div>
-                    <div class="stat-card">
-                        <i class="fas fa-clock"></i>
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">Uptime</div>
+                    <div class="feature-item">
+                        <i class="fas fa-flask"></i>
+                        <h4>Slimefun</h4>
+                        <p>Teknologi canggih, mesin otomatis, dan item-item eksklusif</p>
                     </div>
-                    <div class="stat-card">
-                        <i class="fas fa-gamepad"></i>
-                        <div class="stat-number">10+</div>
-                        <div class="stat-label">Features</div>
+                    <div class="feature-item">
+                        <i class="fas fa-flag"></i>
+                        <h4>KOTH Events</h4>
+                        <p>Rebut dan kuasai titik kunci untuk mendapatkan hadiah istimewa</p>
                     </div>
                 </div>
             </div>
@@ -970,6 +1162,201 @@
                 </div>
             </div>
         </section>
+
+        <!-- TUTORIAL SECTION -->
+        <section id="tutorial" class="section">
+            <div class="section-header">
+                <div class="glow-text">TUTORIAL</div>
+                <h1>Tutorial</h1>
+            </div>
+
+            <div class="tutorial-grid">
+                <!-- Cara Register & Login -->
+                <div class="tutorial-card">
+                    <div class="tutorial-header">
+                        <i class="fas fa-key"></i>
+                        <h3>Register & Login</h3>
+                    </div>
+                    <div class="tutorial-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <p>Untuk pemain baru, gunakan command:</p>
+                                <div class="command-block">
+                                    <i class="fas fa-terminal"></i>
+                                    /register (password) (password)
+                                </div>
+                                <p style="font-size: 0.9rem; color: #888; margin-top: 0.3rem;">Contoh: /register rahasia123 rahasia123</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <p>Untuk login kembali, gunakan:</p>
+                                <div class="command-block">
+                                    <i class="fas fa-terminal"></i>
+                                    /login (password)
+                                </div>
+                                <p style="font-size: 0.9rem; color: #888; margin-top: 0.3rem;">Contoh: /login rahasia123</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="note-box">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>Jangan bagikan password kepada siapapun, termasuk admin!</p>
+                    </div>
+                </div>
+
+                <!-- Cara Login Bedrock -->
+                <div class="tutorial-card">
+                    <div class="tutorial-header">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Login Bedrock</h3>
+                    </div>
+                    <div class="tutorial-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <p>Buka Minecraft Bedrock Edition</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <p>Pilih "Servers" lalu "Add Server"</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <p>Masukkan data server:</p>
+                                <div class="platform-badge">
+                                    <i class="fas fa-server"></i>
+                                    <span>IP: mc.rivalsmp.my.id</span>
+                                </div>
+                                <div class="platform-badge" style="margin-top: 0.5rem;">
+                                    <i class="fas fa-plug"></i>
+                                    <span>Port: 19132</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <p>Klik "Play" untuk bergabung</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="note-box">
+                        <i class="fas fa-info-circle"></i>
+                        <p>Pastikan koneksi internet stabil untuk pengalaman bermain terbaik</p>
+                    </div>
+                </div>
+
+                <!-- Cara Beli Rank -->
+                <div class="tutorial-card">
+                    <div class="tutorial-header">
+                        <i class="fas fa-crown"></i>
+                        <h3>Beli Rank</h3>
+                    </div>
+                    <div class="tutorial-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <p>Buka halaman Rank di website ini</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <p>Pilih rank yang diinginkan</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <p>Klik "Lihat Fitur" untuk melihat detail rank</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <p>Klik "Beli Sekarang" untuk lanjut ke WhatsApp</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="note-box">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>Admin akan merespon dalam 1x24 jam setelah pembayaran</p>
+                    </div>
+                </div>
+
+                <!-- Cara Beli Coin -->
+                <div class="tutorial-card">
+                    <div class="tutorial-header">
+                        <i class="fas fa-coins"></i>
+                        <h3>Beli Coin</h3>
+                    </div>
+                    <div class="tutorial-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <p>Buka halaman Coin di website ini</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <p>Pilih paket coin yang diinginkan</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <p>Klik "Beli Sekarang" untuk lanjut ke WhatsApp</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <p>Lakukan pembayaran sesuai instruksi admin</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="note-box">
+                        <i class="fas fa-clock"></i>
+                        <p>Coin akan langsung ditambahkan setelah pembayaran diverifikasi</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Simple FAQ -->
+            <div class="faq-simple">
+                <h2>
+                    <i class="fas fa-link"></i>
+                    Komunitas & Links
+                </h2>
+                <div class="faq-links">
+                    <a href="#" class="faq-link" onclick="openLink('vote'); return false;">
+                        <i class="fas fa-vote-yea"></i>
+                        Vote Server
+                    </a>
+                    <a href="#" class="faq-link" onclick="openLink('discord'); return false;">
+                        <i class="fab fa-discord"></i>
+                        Discord
+                    </a>
+                    <a href="#" class="faq-link" onclick="openLink('wa'); return false;">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- SIMPLE FOOTER - HANYA COPYRIGHT 2026 -->
+    <div class="simple-footer">
+        <p>© 2026 <span>RivalSMP</span> • All rights reserved • Made with <i class="fas fa-heart"></i> for Minecraft community</p>
     </div>
 
     <!-- MODAL -->
@@ -1104,7 +1491,7 @@
                     showFeatures(rank.name);
                 };
 
-                // Create buy button with FIXED WhatsApp link
+                // Create buy button
                 const buyBtn = document.createElement('a');
                 buyBtn.className = 'btn-buy';
                 buyBtn.innerHTML = '<i class="fas fa-shopping-cart"></i> Beli Sekarang';
@@ -1113,11 +1500,8 @@
                     e.preventDefault();
                     e.stopPropagation();
                     
-                    // FORMAT LINK WA YANG BENAR - LANGSUNG DIBUKA
                     const message = "Saya ingin membeli rank " + rank.name;
                     const waLink = "https://wa.me/6285774033454?text=" + encodeURIComponent(message);
-                    
-                    // BUKA LINK DI TAB BARU
                     window.open(waLink, '_blank');
                     
                     return false;
@@ -1151,7 +1535,7 @@
                 const card = document.createElement('div');
                 card.className = 'coin-card';
                 
-                // Create buy button with FIXED WhatsApp link
+                // Create buy button
                 const buyBtn = document.createElement('a');
                 buyBtn.className = 'btn-buy';
                 buyBtn.innerHTML = '<i class="fas fa-shopping-cart"></i> Beli Sekarang';
@@ -1160,11 +1544,8 @@
                     e.preventDefault();
                     e.stopPropagation();
                     
-                    // FORMAT LINK WA YANG BENAR - LANGSUNG DIBUKA
                     const message = "Saya ingin membeli coin " + coin.amount;
                     const waLink = "https://wa.me/6285774033454?text=" + encodeURIComponent(message);
-                    
-                    // BUKA LINK DI TAB BARU
                     window.open(waLink, '_blank');
                     
                     return false;
@@ -1209,7 +1590,7 @@
 
         // Copy IP
         function copyIP() {
-            const ip = 'play.rivalsmp.my.id';
+            const ip = 'mc.rivalsmp.my.id';
             navigator.clipboard.writeText(ip).then(() => {
                 showToast('✅ IP Address copied!');
             }).catch(() => {
